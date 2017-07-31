@@ -91,17 +91,62 @@
                     @Html.DisplayFor(modelItem => item.Category.CategoryName)
                 </h3>
 
-                @*@TimeSpan difference = DateTime.Now - item.ReviewDate;
-
-                    @if (DateTime.Now.Subtract(item.ReviewDate) < 7)
-                    {*@
-                <h4>
+          
+                @*<h4>
                     Reviewed:
                     @item.ReviewDate.ToShortDateString()
-                </h4>
-                
-                  @item.DaysReview())
-
+                </h4>*@
+               
+                @if (item.Days < 7)
+                {
+                    <h4>
+                        @item.ReviewDate.ToShortDateString()
+                    </h4>
+                }
+                @if(item.Days >= 7 && item.Days < 14)
+                {
+                    <h4>
+                        Reviewed Last Week
+                    </h4>
+                }
+               
+                @if (item.Days >= 14 && item.Days < 21)
+                {
+                    <h4>
+                        Reviewed Two Weeks Ago
+                    </h4>
+                } 
+                @if (item.Days >= 21 && item.Days < 28)
+                {
+                    <h4>
+                        Reviewed Three Weeks Ago
+                    </h4>
+                }
+                @if (item.Days >= 28 && item.Days < 58)
+                {
+                    <h4>
+                        Reviewed Last Month
+                    </h4>
+                }
+                @if (item.Days >= 59 && item.Days < 89)
+                {
+                    <h4>
+                        Reviewed Two Months Ago
+                    </h4>
+                }
+                @if (item.Days >= 90 && item.Days < 129)
+                {
+                    <h4>
+                        Reviewed Three Months Ago
+                    </h4>
+                }
+                @if (item.Days > 130)
+                {
+                    <h4>
+                        Reviewed Over Three Months Ago
+                    </h4>
+                }
+              
 
                 <p id="endlink">
 
