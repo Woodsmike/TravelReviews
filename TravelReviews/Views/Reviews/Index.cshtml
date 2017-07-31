@@ -1,0 +1,113 @@
+﻿@model IEnumerable<TravelReviews.Models.Review>
+
+@{
+    ViewBag.Title = "Reviews";
+}
+<hr style="background-color:#FFF6F0; border-bottom:3px; border-color:#474E5D; margin:0;" />
+<div class="softWhiteBG">
+    <h1 class="reviewH1 softWhiteBG">From Enchanted Getaways to Luxurious Villas...Get the real deal here!</h1>
+
+    <h3 class="reviewH3 softWhiteBG">
+        @Html.ActionLink("Give Us Your Review", "Create")
+    </h3>
+</div>
+<hr style="background-color:#FFF6F0; border-top:3px; border-color:#474E5D; margin:0;" />
+<div class="container-fluid softWhiteBG1" style="margin:auto; padding-top:25px; margin-bottom:0;">
+
+    <div class="row">
+        @foreach (var item in Model)
+
+
+        {
+            <div class="col-md-3 col-sm-6 card">
+
+                <h2>
+                    @Html.DisplayFor(modelItem => item.Location.LocationName)
+                </h2>
+                @if (item.Location.LocationName == "Hawaii, USA")
+                {
+                    <h4>
+                        <img class="img-responsive imgStyle" src="~/Content/Images/hawaii-1.jpg" />
+                    </h4>
+                }
+                @if (item.Location.LocationName == "Tokyo, Japan")
+                {
+                    <h4>
+                        <img class="img-responsive imgStyle" src="~/Content/Images/Tokyo.jpg" />
+                    </h4>
+                }
+                @if (item.Location.LocationName == "Sydney, Australia")
+                {
+                    <h4>
+                        <img class="img-responsive imgStyle" src="~/Content/Images/sydney.jpg" />
+                    </h4>
+                }@if (item.Location.LocationName == "Cozumel, Mexico")
+                {
+                    <h4>
+                        <img class="img-responsive imgStyle" src="~/Content/Images/Cozumel.jpg" />
+                    </h4>
+                }@if (item.Location.LocationName == "London, GB")
+                {
+                    <h4>
+                        <img class="img-responsive imgStyle" src="~/Content/Images/Great Britain.jpg" />
+                    </h4>
+                }@if (item.Location.LocationName == "San Diego, USA")
+                {
+                    <h4>
+                        <img class="img-responsive imgStyle" src="~/Content/Images/SanDiego.jpg" />
+                    </h4>
+                }
+
+                @if (item.Stars == 0)
+                {
+                    <h4>
+                        <img class="img-responsive" src="~/Content/Images/5_Star_Rating_System_0_stars.png" />
+                    </h4>
+                }
+                @if (item.Stars == 1)
+                {
+                    <center><h4><img class="img-responsive" src="~/Content/Images/5_Star_Rating_System_1_star.png" /></h4></center>
+                }
+                @if (item.Stars == 2)
+                {
+
+                    <center><h4><img class="img-responsive" src="~/Content/Images/5_Star_Rating_System_2_stars.png" /></h4></center>
+                }
+                @if (item.Stars == 3)
+                {
+                    <center><h4><img class="img-responsive" src="~/Content/Images/5_Star_Rating_System_3_stars.png" /></h4></center>
+                }
+                @if (item.Stars == 4)
+                {
+                    <center><h4><img class="img-responsive" src="~/Content/Images/5_Star_Rating_System_4_stars.png" /></h4></center>
+                }
+                @if (item.Stars == 5)
+                {
+                    <center><h4><img class="img-responsive" src="~/Content/Images/5_Star_Rating_System_5_stars.png" /></h4></center>
+                }
+
+
+                <h3>
+                    @Html.DisplayFor(modelItem => item.Category.CategoryName)
+                </h3>
+
+                @*@TimeSpan difference = DateTime.Now - item.ReviewDate;
+
+                    @if (DateTime.Now.Subtract(item.ReviewDate) < 7)
+                    {*@
+                <h4>
+                    Reviewed:
+                    @item.ReviewDate.ToShortDateString()
+                </h4>
+
+
+                <p id="endlink">
+
+                    @Html.ActionLink("Details", "Details", new { id = item.ReviewID })
+
+                </p>
+
+            </div>
+        }
+    </div>
+</div>

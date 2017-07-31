@@ -1,0 +1,129 @@
+﻿@model TravelReviews.Models.Review
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<hr style="border-bottom:3px; border-color:#474E5D; margin:0;" />
+<div class="softWhiteBG">
+    <h1 class="reviewH1 softWhiteBG" style="margin-top:0; padding-top:30px; padding-bottom:30px;">Reviews From Travelers Not Critics!</h1>
+
+</div>
+<hr style="border-bottom:3px; border-color:#474E5D; margin:0; margin-bottom:10px;" />
+
+<div class="container detail" style="margin:auto;">
+    <div class="row">
+        <div class="col-md-6" style="padding-top:30px;">
+            <div class="row padLeft">
+                @if (Model.Location.LocationName == "Hawaii, USA")
+                {
+                    <h4>
+                        <img class="img-responsive imgStyleD center-block" src="~/Content/Images/hawaii-1.jpg" />
+                    </h4>
+                }
+                @if (Model.Location.LocationName == "Tokyo, Japan")
+                {
+                    <h4>
+                        <img class="img-responsive imgStyleD center-block" src="~/Content/Images/Tokyo.jpg" />
+                    </h4>
+                }
+                @if (Model.Location.LocationName == "Sydney, Australia")
+                {
+                    <h4>
+                        <img class="img-responsive imgStyleD center-block" src="~/Content/Images/sydney.jpg" />
+                    </h4>
+                }
+                @if (Model.Location.LocationName == "Cozumel, Mexico")
+                {
+                    <h4>
+                        <img class="img-responsive imgStyleD center-block" src="~/Content/Images/Cozumel.jpg" />
+                    </h4>
+                }
+                @if (Model.Location.LocationName == "London, GB")
+                {
+                    <h4>
+                        <img class="img-responsive imgStyleD center-block" src="~/Content/Images/Great Britain.jpg" />
+                    </h4>
+                }
+                @if (Model.Location.LocationName == "San Diego, USA")
+                {
+                    <h4>
+                        <img class="img-responsive imgStyleD" src="~/Content/Images/SanDiego.jpg" />
+                    </h4>
+                }
+            </div>
+        </div>
+        <div class="col-md-6 padLeft">
+            <div clss="row">
+                <h2 class="detailHead">
+                    @Html.DisplayFor(model => Model.Location.LocationName)
+                </h2>
+            </div>
+            <div class="row">
+                @if (Model.Stars == 0)
+                {
+                    <h4>
+                        <img class="img-responsive floatLeft" src="~/Content/Images/5_Star_Rating_System_0_stars.png" />
+                    </h4>
+                }
+                @if (Model.Stars == 1)
+                {
+                    <center><h4><img class="img-responsive floatLeft" src="~/Content/Images/5_Star_Rating_System_1_star.png" /></h4></center>
+                }
+                @if (Model.Stars == 2)
+                {
+
+                    <center><h4><img class="img-responsive floatLeft" src="~/Content/Images/5_Star_Rating_System_2_stars.png" /></h4></center>
+                }
+                @if (Model.Stars == 3)
+                {
+                    <center><h4><img class="img-responsive floatLeft" src="~/Content/Images/5_Star_Rating_System_3_stars.png" /></h4></center>
+                }
+                @if (Model.Stars == 4)
+                {
+                    <center><h4><img class="img-responsive floatLeft" src="~/Content/Images/5_Star_Rating_System_4_stars.png" /></h4></center>
+                }
+                @if (Model.Stars == 5)
+                {
+                    <center><h4><img class="img-responsive floatLeft" src="~/Content/Images/5_Star_Rating_System_5_stars.png" /></h4></center>
+                }
+            </div>
+            <div class="row padleft" style="padding-top:15px;">
+                <h4>
+                    Category: &nbsp;
+                    @Html.DisplayFor(model => Model.Category.CategoryName)
+                </h4>
+            </div>
+            <div class="row padleft">
+                <h4>
+                    Contributor: &nbsp;
+                    @Html.DisplayFor(model => Model.Reviewer.ReviewerName)
+                </h4>
+            </div>
+            <div class="row padleft">
+                <h4>
+                    Review Date: &nbsp;
+                    @Model.ReviewDate.ToShortDateString()
+                </h4>
+
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" style="padding-top:55px;">
+        <div class="row">
+            <h1>
+                @Html.DisplayFor(model => Model.Title)
+            </h1>
+            <h3 style="padding-bottom:20px;">
+                @Html.DisplayFor(model => Model.Content)
+            </h3>
+            <h6 style="float:right;">
+                @Html.ActionLink("Edit", "Edit", new { id = Model.ReviewID })
+            </h6>
+            <p>
+                @*@Html.ActionLink("Edit", "Edit", new { id = Model.ReviewID }) |*@
+                @Html.ActionLink("Back to List", "Index")
+            </p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,373 @@
+﻿
+body {
+    padding-top: 0;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+/*.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}*/
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.navvy.navbar.navbar-static-top { /*the next 3 items keep the navbar pinned
+                                      to the top and keep the background color white*/
+    margin-bottom: 0;
+    padding-top: 6px;
+    padding-bottom: 15px;
+    font-size: 25px;
+    font-family: 'Shadows Into Light Two', cursive;
+    color: #010300;
+    background-color: #FFF6F0;
+}
+
+.navvy a {
+    /*background-color: #217F00;*/
+    color: #010300;
+}
+
+
+.navbar-header { /*this item keeps the navbar links pushed to the right on the navbar*/
+    nav-right: auto;
+}
+
+.navbar-toggle { /*this class and the next class is to all the hamburger icon to be seen*/
+    border: 1px solid #FFF6F0;
+}
+
+.icon-bar {
+    border: 1px solid#010300;
+}
+
+#logoImg { /*I used this id to make the logo the correct size*/
+    width: 75px;
+    margin-top: 0;
+    margin-right: 3px;
+    margin-left: 105px;
+    padding-top: 0;
+}
+
+li {
+    font-size:20px;
+}
+
+.txtShd {
+    text-shadow: 1px 2px aqua;
+}
+#carStyle {
+    padding-top: 25px;
+    padding-bottom: 20px;
+    margin-bottom: 0;
+    height: 275px;
+}
+
+
+.lightBackground {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #FFF6F0;
+    margin-bottom: 0;
+}
+
+.centered {
+    text-align: center;
+    color: #010300;
+}
+
+.softWhiteBG {
+    background-color: #FFF6F0;
+    background-size: cover;
+}
+
+.softWhiteBG1 {
+    background-image: url('Images/clearWater.jpg');
+    background-size: cover;
+    text-align: center;
+    padding-left: 30px;
+}
+
+.h1Section {
+    text-align: center;
+    font-size: 50px;
+    padding-top: 0;
+    margin-top: 0;
+    color: #010300;
+    font-family: 'Shadows Into Light Two', cursive;
+}
+
+.pSmallerSection {
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Shadows Into Light Two', cursive;
+    color: #010300;
+    padding-bottom: 20px;
+}
+
+
+.carouselText {
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Lemonada';
+    color: #010300;
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+
+
+.afterLoc {
+    margin: 0;
+    padding: 40px;
+}
+
+.lightWithBG {
+    margin: 0;
+    padding: 40px;
+    background-color: #9FE4EC;
+}
+
+.myImg:hover {
+    opacity: 0.7;
+}
+
+
+.button {
+    background-color: #9FE4EC;
+    border: 2px;
+    border-radius: 6px;
+    border-color: #474E5D;
+    color: #474E5D;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -moz-transition: 2s;
+    -webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
+    -o-transition: width 2s;
+    transition: width 2s;
+}
+
+    .button:hover {
+        width: 300px;
+        height: 75px;
+    }
+
+
+.button1 {
+    background-color: #FFF6F0;
+    border: 3px;
+    border-color: #474E5D;
+    border-radius: 6px;
+    color: #474E5D;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
+    -o-transition: width 2s;
+    -moz-transition: 2s;
+    transition: width 2s;
+}
+
+    .button1:hover {
+        width: 300px;
+        height: 75px;
+    }
+
+
+
+#myBtn {
+    background-color: #9FE4EC;
+    text-align: center;
+    cursor: pointer;
+}
+
+#locFooter {
+    text-align: center;
+    font-size: 35px;
+    margin-top: 0;
+    padding-top: 20px;
+    color: #010300;
+    font-family: 'Shadows Into Light Two', cursive;
+}
+
+#copyright {
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Shadows Into Light Two', cursive;
+    color: #010300;
+   
+   
+}
+
+.social-bar {
+    background-color: #333333;
+    padding: 10px;
+    height: 49px;
+    margin: auto;
+    text-align: center;
+}
+
+    .social-bar p {
+        font-family: 'Shadows Into Light Two', cursive;
+        font-size: 18px;
+        color: #fff;
+    }
+
+.social {
+    background-image: url(http://s13.postimg.org/63sed3cjn/social_icons.png);
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+}
+
+    .social.twitter {
+        background-position: -35px 0;
+    }
+
+    .social.google {
+        background-position: -70px 0;
+    }
+
+
+/* This section is for the Review Index styling*/
+
+
+#backgroundPic {
+    background-image: url('Images/GenericVacay.jpg');
+    background-size: cover;
+    margin: auto;
+    text-align: center;
+}
+
+.reviewH1 {
+    color: #010300;
+    padding-top: 20px;
+    text-align: center;
+    font-family: 'Shadows Into Light Two', cursive;
+    margin-bottom: 0;
+}
+
+.reviewH3 {
+    background-size: contain;
+    background-color: #FFF6F0;
+    text-align: center;
+    font-family: 'Shadows Into Light Two', cursive;
+    padding-bottom: 10px;
+}
+
+a.my-class {
+    color: #333333;
+}
+
+    a.my-class:active {
+        color: #666666;
+    }
+
+    a.my-class:link {
+        color: #999999;
+    }
+
+    a.my-class:visited {
+        color: #CCCCCC;
+    }
+/*for the index page*/
+.imgStyle {
+    height: 160px;
+    width: 280px;
+}
+/*for the detail page*/
+.imgStyleD {
+    height: 280px;
+    width: 420px;
+}
+
+.card {
+    border: .5px solid black;
+    margin: 15px;
+    border-radius: 6px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,2.6);
+    transition: 0.3s;
+    width: 22.5%;
+    background-color: #FFF6F0;
+}
+
+    .card:hover {
+        box-shadow: 0 8px 16px 3px rgba(0,0,0,0.9);
+    }
+
+
+img {
+    border-radius: 5px 5px 0 0;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.hidden-thing {
+    position: absolute;
+    left: 100%;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+}
+
+.comment {
+    width: 400px;
+    background-color: #FFF6F0;
+    margin: 10px;
+}
+
+
+
+.morecontent span {
+    display: none;
+}
+/* Detail section css*/
+.detailHead {
+    text-align: left;
+    font-size: 40px;
+    font-family: 'Shadows Into Light Two', cursive;
+    color: #010300;
+    padding-top: 30px;
+}
+
+.padLeft {
+    padding-left: 75px;
+}
+
+.floatLeft {
+    float: left;
+}
+
+.detail {
+    border: .5px solid black;
+    margin: 15px;
+    border-radius: 6px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,2.6);
+    transition: 0.3s;
+    color: #010300;
+    margin-top: 20px;
+    background-color: #FFF6F0;
+    background-size: cover;
+}

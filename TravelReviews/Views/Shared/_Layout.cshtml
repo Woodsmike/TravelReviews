@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vacay Say - @ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Bad+Script|Courgette|Great+Vibes|Kalam|Kaushan+Script|Shadows+Into+Light+Two" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body style="background-color:#FFF6F0;">
+    <div>
+        <!--For best results of keeping the header section responsive I needed to enclose the navbar with this container-->
+        <nav class="navbar navbar-static-top navvy">
+            <!--the id is to keep the items in the navbar from having hover background colors-->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" style="padding-top:0; " href="~/Home/Index"><img class="img-responsive" id="logoImg" src="~/Content/Images/MadeLogo.png" /></a>
+                <h1 class="txtShd" style="display:inline; margin-top:5px;">Vacay Say</h1>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="txtShd" style="margin-right: 35px; font-weight:bold; font-size:28px;">@Html.ActionLink("What Our Reviews Say", "Index", "Reviews")</li>
+                    <li class="txtShd">@Html.ActionLink("Add Reviews", "Create", "Reviews")</li>
+                    <li class="txtShd">@Html.ActionLink("Locations", "Index", "Locations")</li>
+                    <li class="txtShd">@Html.ActionLink("Categories", "Index", "Categories")</li>
+                    <li class="txtShd" style="margin-right:75px;">@Html.ActionLink("Reviewers", "Index", "Reviewers")</li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </div>
+
+    <div>
+        @RenderBody()
+
+        <footer class="fullWidth" style="padding:0;">
+            <div class="lightWithBG">
+                <center><button onclick="topFunction()" id="myBtn" title="Go to Top">^</button></center>
+                <h1 id="locFooter">Vacay Say</h1>
+                <p id="copyright">NOT AT ALL copyrighted</p>
+
+            </div>
+            <div class="row social-bar">
+
+                <p class="follow-us">
+                    <span class="follow">Follow Us @@ &nbsp; </span>
+                    <a href="http://facebook.com" target="_blank" class="social fb" style="padding-right:5px;"></a>
+                    <a href="https://twitter.com" target="_blank" class="social twitter"></a>
+                    <a href="https://plus.google.com" target="_blank" class="social google"></a>
+
+                </p>
+            </div>
+
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+    <script>
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+</body>
+</html>
+
